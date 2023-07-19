@@ -1,0 +1,27 @@
+--Create a grocery store database
+
+CREATE TABLE Clothing (id INTEGER PRIMARY KEY, name TEXT, color text, Size TEXT,quantity INTEGER, price INTEGER); 
+
+INSERT INTO Clothing VALUES(1, "t-shirt", "yellow", "x-small",4 ,15);
+INSERT INTO Clothing VALUES(2, "jacket","brown", "large", 7, 25);
+INSERT INTO Clothing VALUES(3, "jeans", "blue", "small",4, 65);
+INSERT INTO Clothing VALUES (4, "tank top", "orange","medium",2, 5);
+INSERT INTO Clothing VALUES(5,"flannel", "green","x-large",8, 64);
+INSERT INTO CLOTHING VALUES(6,"LEATHER JACKET","BLACK", "SMALL", 5, 110);
+INSERT INTO CLOTHING VALUE
+INSERT INTO CLOTHING VALUES(8, "LEGGINGS", "BLACK","SMALL", 2, 15);
+INSERT INTO CLOTHING VALUES(9,"SHORTS", "PURPLE","LARGE", 23, 25);
+INSERT INTO CLOTHING VALUES(10, "SOCKS", "PINK","ONE SIZE", 46, 3);
+INSERT INTO CLOTHING VALUES(11, "BRA", "WHITE","MEDIUM",110, 32);
+INSERT INTO CLOTHING VALUES(12,"UNDERWEAR", "BLACK", "X-LARGE", 72, 14);
+INSERT INTO CLOTHING VALUES(13,"SWEATER", "BROWN", "SMALL", 12, 15);
+INSERT INTO CLOTHING VALUES(14,"HAT","YELLOW","ONE SIZE", 4, 10);
+INSERT INTO CLOTHING VALUES(15,"SHOES", "WHITE", "SMALL", 12,62);
+
+--display all prices in database.
+
+SELECT SUM(PRICE) FROM CLOTHING;
+
+--display the database ordered by price.
+
+SELECT * FROM CLOTHING ORDER BY price;
