@@ -111,19 +111,6 @@ INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (98,'Madagascar: Escape 2 Africa','P/DW',603.90,180.00,0.30,423.90,0.70,2008);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (99,'Casino Royale','Sony',599.00,167.40,0.28,431.60,0.72,2006);
 INSERT INTO topmovies(Rank,Title,Studio,Worldwide,Domestic,DomesticPct,Overseas,OverseasPct,Year) VALUES (100,'Tangled','BV',591.80,200.80,0.34,391.00,0.66,2010);
-SELECT title, AVG(rank) AS avg_rank FROM topmovies
-GROUP BY title
-HAVING avg_rank > 70;
-
-SELECT title, MAX(rank) AS MAX_rank FROM topmovies
-GROUP BY title
-HAVING MAX_rank > 90
-ORDER BY Max_rank;
-
-SELECT title, MIN(rank) AS MIN_rank FROM topmovies
-GROUP BY title
-HAVING MIN_rank < 40 
-ORDER BY MIN_rank;
 
 SELECT title,SUM(rank) AS total_rank FROM topmovies
 GROUP BY studio
@@ -131,11 +118,11 @@ HAVING total_rank > 1000;
 
 SELECT title, year,
 CASE
-WHEN year > 2000 THEN "20th century"
+WHEN year > 2000 THEN "21st century"
 WHEN year > 2010 THEN "great decade"
 WHEN year > 2020 THEN "bad"
 ELSE "average"
 END as "verbal rating"
 FROM topmovies;
 
-SELECT title FROM topmovies WHERE year >2010 AND rank < 50;
+SELECT title FROM topmovies WHERE year >2010 AND rank> 50;
