@@ -1,0 +1,26 @@
+CREATE TABLE Author (id INTEGER PRIMARY KEY,name TEXT,email TEXT,B_Day INTEGER);
+INSERT INTO Author VALUES(1,"Sara
+_Shepard","sara@sarashepard.com",04.08);
+INSERT INTO Author VALUES(2,"GJ.Walker.Smith", "gj@gmail.com",03.12);
+INSERT INTO Author VALUES(3,"Kate_White","kw@icloud.com",02.11);
+INSERT INTO Author VALUES(4,"John_Marrs","johnM@yahoo.com",08.08);
+INSERT INTO AUTHOR VALUES(5,"Freida_McFadden","FreM@gmail.com",04.24);
+INSERT INTO AUTHOR VALUES(6,"Michele_Leathers","ML@gmail.com",08.24);
+INSERT INTO AUTHOR VALUES(7,"Jess Lourey","Jlou@gmail.com",06.20);
+INSERT INTO AUTHOR VALUES(8,"Alice_Feeney","AliceFeeney@gmail.com",03.15);
+
+CREATE TABLE Famous_Book(id INTEGER PRIMARY KEY,title TEXT,books_written INTEGER);
+
+INSERT INTO Famous_Book VALUES(1,"Pretty_Little_Liars",196);
+INSERT INTO Famous_Book VALUES(2,"Saving_Wishes",8);
+INSERT INTO Famous_Book VALUES(3,"Have_you_seen_me",24);
+INSERT INTO Famous_Book VALUES(4,"The_One",9);
+INSERT INTO Famous_Book VALUES(5,"The_Housemaid",21);
+INSERT INTO Famous_Book VALUES(6,"They_All_Had",20);
+INSERT INTO Famous_Book VALUES(7,"Unspeakable_Things",13);
+INSERT INTO Famous_Book VALUES(8,"Sometimes_I_Lie",6);
+
+SELECT Author.name ,Famous_Book.title,books_written,Author.email,Author.B_Day
+FROM Author
+JOIN Famous_Book
+ON Author.id= Famous_Book.id;
